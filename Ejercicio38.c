@@ -8,8 +8,9 @@ int main()
     {
         for (int j = 0; j <= numero; j++)
         {
-           printf("%d * %d = %d ", i, j, i*j);
+            printf("%2d *%2d=%2d   ", i, j, i * j); // El %2d hace que haya un doble espacio de caracteres para crear unifromidad
         }
+        printf("\n\n");
     }
 
     return 0;
