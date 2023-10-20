@@ -36,41 +36,48 @@ int main()
     scanf("%d", &num1);
     printf("Ingrese el segundo numero: \n");
     scanf("%d", &num2);
-
-    // Recorrido desde 1 hasta el num1 para verificar si los numeros son primos y agregarlos a un contador
-    for (int i = 1; i <= num1; i++)
+    // El primer if verifica que el numero pueda tener primos antes de continuar
+    if (num1 <= 0 | num2 <= 0)
     {
-        if (esPrimo(i))
-        {
-            barrido1++;
-        }
-    }
-
-    // Recorrido desde 1 hasta el num2 para verificar si los numeros son primos y agregarlos a un contador
-    for (int j = 1; j <= num2; j++)
-    {
-        if (esPrimo(j))
-        {
-            barrido2++;
-        }
-    }
-
-    printf("La cantidad de primos de %d es: %d\n", num1, barrido1);
-    printf("La cantidad de primos de %d es: %d\n", num2, barrido2);
-
-    // Verificaion del numero que tiene mayor cantidad de primos 
-    if (barrido1 == barrido2)
-    {
-        printf("Ambos tienen el mismo numeros de primos con %d", barrido1);
-    }
-    else if (barrido1 > barrido2)
-    {
-        printf("El numero %d tiene mayor cantidad de numeros primos con %d", num1, barrido1);
+        printf("Los numeros son negativos o cero y no disponen de numeros primos, intentelo de nuevo");
     }
     else
     {
-        printf("El numero %d tiene mayor cantidad de numeros primos con %d", num2, barrido2);
-    }
 
+        // Recorrido desde 1 hasta el num1 para verificar si los numeros son primos y agregarlos a un contador
+        for (int i = 1; i <= num1; i++)
+        {
+            if (esPrimo(i))
+            {
+                barrido1++;
+            }
+        }
+
+        // Recorrido desde 1 hasta el num2 para verificar si los numeros son primos y agregarlos a un contador
+        for (int j = 1; j <= num2; j++)
+        {
+            if (esPrimo(j))
+            {
+                barrido2++;
+            }
+        }
+
+        printf("La cantidad de primos de %d es: %d\n", num1, barrido1);
+        printf("La cantidad de primos de %d es: %d\n", num2, barrido2);
+
+        // Verificaion del numero que tiene mayor cantidad de primos
+        if (barrido1 == barrido2)
+        {
+            printf("Ambos tienen el mismo numeros de primos con %d", barrido1);
+        }
+        else if (barrido1 > barrido2)
+        {
+            printf("El numero %d tiene mayor cantidad de numeros primos con %d", num1, barrido1);
+        }
+        else
+        {
+            printf("El numero %d tiene mayor cantidad de numeros primos con %d", num2, barrido2);
+        }
+    }
     return 0;
 }
