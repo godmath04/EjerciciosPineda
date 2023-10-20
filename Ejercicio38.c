@@ -4,11 +4,12 @@
 int main()
 {
     int numero = 10;
-    int multiplicacion;
     for (int i = 1; i <= numero; i++)
     {
-        multiplicacion = i * numero;
-        printf("%d * %d = %d ", numero, i, multiplicacion);
+        for (int j = 0; j <= numero; j++)
+        {
+           printf("%d * %d = %d ", i, j, i*j);
+        }
     }
 
     return 0;
