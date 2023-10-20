@@ -29,7 +29,9 @@ bool esPrimo(int primo)
 int main()
 {
     int num1 = 15;
+    int num2 = 7;
     int barrido1 = 0;
+    int barrido2 = 0;
 
     for (int i = 1; i <= num1; i++)
     {
@@ -43,6 +45,22 @@ int main()
             printf("%d no es primo.\n", i);
         }
     }
+
+    for (int j = 1; j <= num2; j++)
+    {
+        if (esPrimo(j))
+        {
+            printf("%d es primo.\n", j);
+            barrido2++;
+        }
+        else
+        {
+            printf("%d no es primo.\n", j);
+        }
+    }
+
+
     printf("La cantidad de primos es: %d", barrido1);
+    printf("La cantidad de primos es: %d", barrido2);
     return 0;
 }
