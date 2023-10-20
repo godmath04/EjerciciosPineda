@@ -2,9 +2,6 @@
 #include <stdio.h>
 #include <stdbool.h> // PERMITE EL USO DE BOOL Y EL RETURN DE UN 1 O UN 0
 
-int primo;
-int num1, num2;
-
 // FUNCION QUE VERIFICA SI UN NUMERO ES PRIMO RETORNANDO UN 1 al ser verdadero o 0 al contrario
 bool esPrimo(int primo)
 {
@@ -28,39 +25,37 @@ bool esPrimo(int primo)
 
 int main()
 {
-    int num1 = 15;
-    int num2 = 7;
+    int num1;
+    int num2;
     int barrido1 = 0;
     int barrido2 = 0;
 
+    // INSTRUCCIONES AL USUARIO
+    printf("El programa le mostrara cual de los numeros tiene la mayor cantidad de numeros primos\n");
+    printf("Ingrese el primer numero: \n");
+    scanf("%d", &num1);
+    printf("Ingrese el segundo numero: \n");
+    scanf("%d", &num2);
+
+    // Recorrido desde 1 hasta el num1 para verificar si los numeros son primos y agregarlos a un contador
     for (int i = 1; i <= num1; i++)
     {
         if (esPrimo(i))
         {
-            printf("%d es primo.\n", i);
             barrido1++;
-        }
-        else
-        {
-            printf("%d no es primo.\n", i);
         }
     }
 
+    // Recorrido desde 1 hasta el num2 para verificar si los numeros son primos y agregarlos a un contador
     for (int j = 1; j <= num2; j++)
     {
         if (esPrimo(j))
         {
-            printf("%d es primo.\n", j);
             barrido2++;
-        }
-        else
-        {
-            printf("%d no es primo.\n", j);
         }
     }
 
-
-    printf("La cantidad de primos es: %d", barrido1);
-    printf("La cantidad de primos es: %d", barrido2);
+    printf("La cantidad de primos es: %d\n", barrido1);
+    printf("La cantidad de primos es: %d\n", barrido2);
     return 0;
 }
