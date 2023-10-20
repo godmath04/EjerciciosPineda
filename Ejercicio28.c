@@ -55,7 +55,22 @@ int main()
         }
     }
 
-    printf("La cantidad de primos es: %d\n", barrido1);
-    printf("La cantidad de primos es: %d\n", barrido2);
+    printf("La cantidad de primos de %d es: %d\n", num1, barrido1);
+    printf("La cantidad de primos de %d es: %d\n", num2, barrido2);
+
+    // Verificaion del numero que tiene mayor cantidad de primos 
+    if (barrido1 == barrido2)
+    {
+        printf("Ambos tienen el mismo numeros de primos con %d", barrido1);
+    }
+    else if (barrido1 > barrido2)
+    {
+        printf("El numero %d tiene mayor cantidad de numeros primos con %d", num1, barrido1);
+    }
+    else
+    {
+        printf("El numero %d tiene mayor cantidad de numeros primos con %d", num2, barrido2);
+    }
+
     return 0;
 }
