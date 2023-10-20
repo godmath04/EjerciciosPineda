@@ -1,16 +1,17 @@
 // LEER DOS NUMEROS ENTEROS Y OBTENER CUAL TIENE LA MAYOR CANTIDAD DE PRIMOS
 #include <stdio.h>
-#include <stdbool.h>
+#include <stdbool.h> // PERMITE EL USO DE BOOL Y EL RETURN DE UN 1 O UN 0
 
+int primo;
 int num1, num2;
-// FUNCION QUE VERIFICA SI UN NUMERO ES PRIMO RETORNANDO UN 1 O 0
 
-bool esPrimo(int num1)
+// FUNCION QUE VERIFICA SI UN NUMERO ES PRIMO RETORNANDO UN 1 al ser verdadero o 0 al contrario
+bool esPrimo(int primo)
 {
     int u = 0;
-    for (int i = 1; i <= num1; i++)
+    for (int i = 1; i <= primo; i++)
     {
-        if (num1 % i == 0)
+        if (primo % i == 0)
         {
             u++;
         }
@@ -27,14 +28,19 @@ bool esPrimo(int num1)
 
 int main()
 {
-    int x = 10;
-    if (esPrimo(x))
+    int num1 = 10;
+    int barrido1 = 0;
+
+    for (int i = 1; i <= num1; i++)
     {
-        printf("%d es primo.\n", x);
-    }
-    else
-    {
-        printf("%d no es primo.\n", x);
+        if (esPrimo(i))
+        {
+            printf("%d es primo.\n", i);
+        }
+        else
+        {
+            printf("%d no es primo.\n", i);
+        }
     }
     return 0;
 }
