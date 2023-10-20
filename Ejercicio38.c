@@ -3,9 +3,13 @@
 
 int main()
 {
-    int numero = 10;
+    int numero;
+
+    printf("Ingrese el numero para el cual desea realizar la tabla de multiplicar: \n");
+    scanf("%d", &numero);
+
     // Titulo de las tablas
-    for (int i = 0; i <= numero; i++)
+    for (int i = 1; i <= numero; i++)
     {
         printf("%2d |", i);
     }
@@ -16,7 +20,7 @@ int main()
     {
         for (int j = 1; j <= numero; j++)
         {
-            printf("%2d |", i*j); // El %2d hace que haya un doble espacio de caracteres para crear unifromidad
+            printf("%2d |", i * j); // El %2d hace que haya un doble espacio de caracteres para crear unifromidad
         }
         printf("\n\n");
     }
