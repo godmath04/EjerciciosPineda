@@ -5,27 +5,20 @@ int main()
     int num1;
     int num2;
 
-    // PRIMERO LOS NUMEROS PARES DE LA COL.IZQUIERDA VAN AVANZADO DE 1 EN 1 CON LOS DE LA COL DERECHA
-    // EN OTRAS PALABRAS LA COL DE LA DERECHA ES LA MITAD DE LOS PARES SUMADO 1
+    // PARA OBTENER EL RESULTADO SE DEBE TRABAJAR CON NUMEROS PARES E IMPARES POR SEPARADO
+    // 
     for (int i = 0; i < 10; i++)
     {
-        if (i % 2 == 0)
+        if (i % 2 == 0) // OBTIENE LOS NUMEROS PARES DEL 1 AL 9
         {
-            num2 = i/2 +1;
-        printf("%d %d\n", i, num2);
+            num2 = i / 2 + 1;
+            printf("%d %d\n", i, num2); 
         }
-        
+        else // OBTIENE LOS NUMEROS IMPARES DEL 1 AL 9
+        {
+            num2 = i / 2 + 1;
+            printf("%d %d\n", i, num2);
+        }
     }
     printf("----------\n");
-    // POR OTRO LADO CON LOS NUMEROS IMPARES 
-    for (int j = 0; j < 10; j++)
-    {
-        if (j % 2 != 0)
-        {
-            num2 = j/2 +1 ;
-        printf("%d %d\n", j, num2);
-        }
-        
-    }
-    return 0;
 }
