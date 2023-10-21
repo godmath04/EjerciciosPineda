@@ -16,6 +16,16 @@ int main()
         }
         
     }
-    
+    printf("----------\n");
+    // POR OTRO LADO CON LOS NUMEROS IMPARES 
+    for (int j = 0; j < 10; j++)
+    {
+        if (j % 2 != 0)
+        {
+            num2 = j/2 +1 ;
+        printf("%d %d\n", j, num2);
+        }
+        
+    }
     return 0;
 }
